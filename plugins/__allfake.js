@@ -22,7 +22,7 @@ handler.all = async function (m) {
 		// Ini untuk command crator/owner
 		global.kontak2 = [
          [owner[0], await this.getName(owner[0] + '@s.whatsapp.net'), 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'kimimarusadboy01@gmail.com', true],
-         [owner[1], await this.getName(owner[0] + '@s.whatsapp.net'), 'ʙᴏᴛ', 'itheknow19@gmail.com', true],
+         [owner[1], await this.getName(owner[0] + '@s.whatsapp.net'), 'pemilik bot nomor ini', ' ', true],
         ]
         
 		// ucapan ini mah

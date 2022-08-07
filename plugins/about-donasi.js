@@ -1,10 +1,10 @@
 let handler = async (m, { conn, usedPrefix }) => conn.sendButton(m.chat, `
 ╭─「 Donasi • Dana 」
-│ • Indosat [085752765133]
-│ • Dana  [085752765133]
+│ • Indosat [6288227856331]
+│ • Dana  [6288227856331]
 ╰────
 ╭─「 *NOTE* 」
-│ > Ingin donasi? Wa.me/6285752765133
+│ > Ingin donasi? Wa.me/6288227856331
 ╰────
 `.trim(), wm, 'Menu', usedPrefix + 'menu', m) // Tambah sendiri kalo mau
 handler.help = ['donasi']
