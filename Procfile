@@ -1,1 +1,1 @@
-worker: npm start
+worker: node . --db 'mongodb+srv://db-vbot:<password>@cluster0.ssoum2t.mongodb.net/?retryWrites=true&w=majority'
