@@ -1,7 +1,7 @@
 {
-    "name": "Kimimaru-MD",
-    "version": "3.0.1",
-    "description": "Simple Bot WhatsApp",
+    "name": "Family-MD",
+    "version": "2.4.0",
+    "description": "Simle Bot WhatsApp with Baileys Multi Device",
     "depecrated": false,
     "main": "index.js",
     "directories": {
@@ -23,26 +23,26 @@
         "whatsapp",
         "mybot-md",
         "family-bot",
-        "kimimaru-md",
+        "family-md",
         "enjela",
         "shiraori-md",
         "stikerin",
         "wabot-aq"
     ],
-    "homepage": "https://github.com/K1mimaru/kimimaru-md",
+    "homepage": "https://github.com/fokusdotid/family-md",
     "author": {
-        "name": "M.Jamil"
+        "name": "Fokus ID"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/K1mimaru/kimimaru-md.git"
+        "url": "git+https://github.com/fokusdotid/family-md.git"
     },
     "bugs": {
-        "url": "https://github.com/K1mimaru/kimimaru-md/issues"
+        "url": "https://github.com/fokusdotid/family-md/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
-        "@adiwajshing/baileys": "^4.1.0",
+        "@adiwajshing/baileys": "github:adiwajshing/baileys",
         "@adiwajshing/keyed-db": "^0.2.4",
         "@bochilteam/scraper": "^2.0.0",
         "1cak": "^1.0.4",
@@ -52,7 +52,6 @@
         "cfonts": "^2.10.0",
         "chalk": "^4.1.2",
         "cheerio": "^1.0.0-rc.10",
-        "child_process": "^1.0.2",
         "colors": "1.4.0",
         "express": "^4.17.3",
         "file-type": "^16.5.3",
@@ -60,11 +59,8 @@
         "form-data": "^4.0.0",
         "g-i-s": "^2.1.6",
         "google-it": "^1.6.2",
-        "google-play-scraper": "^9.0.2",
         "human-readable": "^0.2.1",
-        "hxz-api": "^1.0.1",
         "image-to-base64": "^2.2.0",
-        "jimp": "^0.16.1",
         "jsdom": "^18.1.1",
         "lodash": "^4.17.21",
         "lowdb": "^2.1.0",
