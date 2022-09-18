@@ -1,27 +1,21 @@
-let axios = require('axios');
+import { mediafiredl } from '@bochilteam/scraper'
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+    if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk/file`
+    let res = await mediafiredl(args[0])
+    let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
+    conn.sendButtonDoc(m.chat,`*Mediafire Downloader ✨*
+_Name : ${filename}_
+_Size : ${filesizeH}_
+_Extension : ${ext}_
+_Uploaded : ${aploud}_
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-	if (!text) throw `uhm.. urlnya mana?\n\npenggunaan:\n${usedPrefix + command} url\ncontoh:\n${usedPrefix + command} http://www.mediafire.com/file/js0gr2nozcmk9yg/example.txt/file`
-	
-	let res = await (await axios.get(API('males', '/mediafire', { url: text }))).data;
-	if (res.status != 200) throw res.message;
-	let txt = `
-*Nama File:* ${res.result.filename}
-*Ukuran:* ${res.result.filesize}
-*Tipe File:* ${res.result.filetype}
-*Di Upload:* ${res.result.uploadAt}
-*Link:* ${res.result.link}
-
-
-_harap bersabar, file sedang dikirim :'v_
-`.trim()
-conn.sendButton(m.chat, txt, wm, 'menu', usedPrefix + 'menu', m)
-conn.sendMessage(m.chat, { document: { url: res.result.link }, mimetype: res.result.mimetype, fileName: res.result.filename }, { quoted: m })
+_*File sedang dikirim...*_`, wm, 'Menu', '.menu', m, ephemeral)
+    await conn.sendFile(m.chat, url, filename, '', m, null, { mimetype: ext, asDocument: true })
 }
-
 handler.help = ['mediafire'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^((media|md)?fire)$/i
-handler.exp = 3
+handler.command = /^(mediafire|mf)$/i
+
 handler.limit = true
-module.exports = handler
+
+export default handler
