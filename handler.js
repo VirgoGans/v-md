@@ -107,8 +107,8 @@ module.exports = {
                     if (!isNumber(user.age)) user.age = -1
                     if (!isNumber(user.regTime)) user.regTime = -1
                     }
-                    if (!('premium' in user)) user.premium = false
-                    if (!isNumber(user.premiumTime)) user.premiumTime = 0
+                    if (!('premium' in user)) user.premium = true
+                    if (!isNumber(user.premiumTime)) user.premiumTime = 99999999
                     if (!user.role) user.role = ''
                     if (!('autolevelup' in user)) user.autolevelup = false
                     if (!isNumber(user.pc)) user.pc = 0
@@ -210,8 +210,8 @@ module.exports = {
                     label: '',
                     age: -1,
                     regTime: -1,
-                    premium: false,
-                    premiumTime: 0,
+                    premium: true,
+                    premiumTime: 99999999,
                     role: '',
                     autolevelup: false,
                     pc: 0,
