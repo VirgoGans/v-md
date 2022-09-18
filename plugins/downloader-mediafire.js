@@ -14,7 +14,7 @@ let handler = async (m, { isOwner, isPrems, command, usedPrefix, text, args, con
      let ss = await (await fetch(global.API('nrtm', '/api/ssweb', { delay: 1000, url: u }))).buffer()
      let res = await mediafiredl(args[0])
      let { url, url2, filename, ext, aploud, filesize, filesizeH } = res
-     let isLimit = (isPrems || isOwner ? limit : limit) * 1024 < filesize
+     let isLimit = (isPrems || isOwner ? limit : limit) * 200 < filesize
      let error = `Gagal mendownload..`
      let capt = `📭 *Mediafire Downloader*
 
@@ -36,6 +36,5 @@ handler.tags = ['downloader']
 handler.command = /^(me?d(ia)?f(ire)?)$/i
 
 handler.limit = true
-handler.group = true
 
 module.exports = handler
