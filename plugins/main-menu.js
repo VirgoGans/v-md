@@ -14,7 +14,7 @@ const defaultMenu = {
 
 • Tanggal: *%week %weton, %date*
 • Tanggal Islam: *%dateIslamic*
-• Waktu: *%time*
+• Waktu: *%time(njir)*
 
 • Uptime: *%uptime (%muptime)*
 • Database: %rtotalreg dari %totalreg
