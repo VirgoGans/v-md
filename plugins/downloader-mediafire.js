@@ -22,5 +22,6 @@ conn.sendMessage(m.chat, { document: { url: res.result.link }, mimetype: res.res
 handler.help = ['mediafire'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^((media|md)?fire)$/i
-
+handler.exp = 3
+handler.limit = true
 module.exports = handler

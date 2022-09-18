@@ -14,5 +14,4 @@ handler.tags = ['tools']
 handler.alias = ['ss', 'ssf', 'ssweb', 'sswebf']
 handler.command = /^ss(web)?f?$/i
 handler.exp = 3
-handler.limit = true
 module.exports = handler

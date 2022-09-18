@@ -6,7 +6,6 @@ let handler = async (m, { text, usedPrefix, command }) => {
 }
 handler.help = ['ringtone <pencarian>']
 handler.tags = ['tools']
-handler.limit = 1
 
 handler.command = /^ringtone/i
 handler.register = false

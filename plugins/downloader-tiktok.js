@@ -1,15 +1,14 @@
-const hxz = require("hxz-api")
-let handler = async(m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) throw `*Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
-if (!args[0].match(/tiktok/gi)) throw `*Link salah! Perintah ini untuk mengunduh video tiktok dengan link*\n\ncontoh:\n${usedPrefix + command} https://vm.tiktok.com/ZGJAmhSrp/`
-let p = await  hxz.ttdownloader(args[0])
-const { nowm, wm, audio } = p
-// made by aine
- conn.sendFile(m.chat, nowm, 'tiktok.mp4', `*${global.wm}*`, m)
+let axios = require('axios');
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+    if (!args[0]) throw `contoh:\n ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
+    let res = (await axios.get(API('males', '/tiktok', { url: args[0] } ))).data;
+    if (res.status != 200) throw res.message;
+    if (!res) throw res.message;
+    conn.sendButtonVid(m.chat, res.video, `*Judul:* ${res.title}\n${res.author ? `*Pembuat Video:* ${res.author}` : '\n' }`.trim(), 'Cara simpan digalery:\n1. Download dulu videonya\n2. Buka terus klik titik 3 pojok kanan atas\n3. lalu klik simpan!', 'menu', usedPrefix + 'menu', m)
 }
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tiktok|tiktokdl)$/i
-handler.limit = true
-//handler.group = true
+handler.command = /^(tik(tok)?(dl)?)$/i
+
+
 module.exports = handler

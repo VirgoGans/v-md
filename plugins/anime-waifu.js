@@ -5,12 +5,11 @@ let handler = async (m, { conn }) => {
   let json = await res.json()
   if (!json.url) throw 'Error!'
   //conn.sendFile(m.chat, json.url, '', 'istri gweh', m, 0, { thumbnail: Buffer.alloc(0) })
-  conn.sendButtonImg(m.chat, json.url, 'Nih Waifu nya ♨️', 'Wangyy\nMade By '+wm, 'Get Again', '.waifu', m)
+  conn.sendButtonImg(m.chat, json.url, 'Nih Waifu nya ♨️', 'Jgn keterusan njir\nMade By '+wm, 'Get Again', '.waifu', m)
 }
 handler.help = ['waifu']
 handler.tags = ['anime']
 handler.command = /^(waifu)$/i
 
-handler.limit = true
 
 module.exports = handler

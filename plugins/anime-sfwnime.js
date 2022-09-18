@@ -11,6 +11,5 @@ handler.help = ['neko', 'cry', 'hug', 'shinobu', 'bully', 'kiss', 'lick', 'pat',
 handler.tags = ['anime']
 handler.command = /^(neko|cry|hug|shinobu|bully|kiss|lick|pat|bonk|yet|awoo|smile|blush|wave|nom|bite|glomp|slap|kill|happy|wink|poke|dance|cringe)$/i
 
-handler.limit = true
 
 module.exports = handler

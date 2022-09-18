@@ -10,6 +10,5 @@ handler.help = ['senja']
 handler.tags = ['quotes']
 handler.command = /^(senja)$/i
 
-handler.limit = true
 
 module.exports = handler

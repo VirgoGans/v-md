@@ -14,5 +14,4 @@ handler.tags = ['downloader']
 handler.alias = ['fb', 'fbdl', 'facebook', 'facebookdl']
 handler.command = /^((facebook|fb)(dl)?)$/i
 handler.exp = 3
-handler.limit = true
 module.exports = handler

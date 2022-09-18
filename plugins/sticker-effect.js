@@ -22,6 +22,5 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 handler.help = ["lolice", "triggered", "horny", "simpcard", "comrade", "jail", "wasted", "passed"]
 handler.tags = ['sticker']
 handler.command = /^(lolice|triggered|horny|simpcard|comrade|jail|wasted|passed)$/i
-handler.limit = true
 //Creator : M.Jamil
 module.exports = handler
