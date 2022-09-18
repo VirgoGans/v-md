@@ -18,4 +18,4 @@ handler.command = /^(mediafire|mf)$/i
 
 handler.limit = true
 
-export default handler
+module.exports = handler
