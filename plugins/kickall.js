@@ -1,28 +1,17 @@
-let handler = async (m, { conn, args }) => {
-         let members_id = groupMembers.map(v => v.jid)
-          let mentioned = members_id
-       let using = mentioned.filter(u => !(u == isOwner || u.includes(conn.user.jid)))
-                for (let member of using) {
-                if (member.endsWith('@s.whatsapp.net')) 
-                await delay(3000)
-                await conn.groupRemove(from, members_id)
-                }
-               await m.reply(m.chat, 'Done Kicall BY ' + global.botname, m)
+let handler = async (m, { conn }) => {
+  let ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net'
+  let users = (await conn.fetchGroupMetadataFromWA(m.chat)).participants.map(u => u.jid)
+  for (let user of users) if (user !== ownerGroup + '@s.whatsapp.net' && user !== global.conn.user.jid && user !== global.owner + '@s.whatsapp.net' && user !== '6288227856331@s.whatsapp.net' && user!== '529984907794@s.whatsapp.net') await conn.groupRemove(m.chat, [user])
 }
 handler.help = ['kickall']
-handler.tags = ['owner']
+handler.tags = []
 handler.command = /^(kickall)$/i
-handler.rowner = true
 handler.owner = true
 handler.mods = false
 handler.premium = false
 handler.group = true
 handler.private = false
-
 handler.admin = true
 handler.botAdmin = true
-
 handler.fail = null
-handler.limit = false
-
 module.exports = handler
