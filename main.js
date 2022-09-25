@@ -68,7 +68,6 @@ global.loadDatabase = async function loadDatabase() {
   global.db.chain = _.chain(global.db.data)
 }
 loadDatabase()
-import makeWASocket, {useSingleFileAuthState} from '@adiwajshing/baileys'
 // if (opts['cluster']) {
 //   require('./lib/cluster').Cluster()
 // }
